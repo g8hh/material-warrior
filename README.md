@@ -1,37 +1,43 @@
-# material-warrior
+# 物质勇士（Material Warrior）
 
-#### 介绍
-物质勇士（Material Warrior）
+Where an incremental game meets material design(ish) and, of course, emojis.
 
-#### 软件架构
-软件架构说明
+Play the game here: http://gamehelp16.github.io/material-warrior/
 
 
-#### 安装教程
+## Changelog:
 
-1. xxxx
-2. xxxx
-3. xxxx
+**Version 1.2 (June 12th 2016)**
+- **Added XP & leveling system** (the game might be worth replaying).
+- Added speedrun mode which will be available after completing the game.
+- Some packages will spawn randomly at the beginning area to add some variations to the early game (requires reset).
+- Numbers now have thousand separators.
+- Snakes now stun less often.
+- Cookies now increase your attack damage.
+- Fixed free scissors upgrade bug.
+- Fixed fire overlapping barriers bug.
+- Fixed bug regarding fighting ghosts with low health.
+- Balanced some numbers.
+- Some other fixes and improvements.
 
-#### 使用说明
+**Version 1.1.2 (May 10th 2016)**
+- Knife bug fixed.
 
-1. xxxx
-2. xxxx
-3. xxxx
+**Version 1.1.1 (May 9th 2016)**
 
-#### 参与贡献
+- Lowered the price of some items.
+- Lava snake is a little bit slower.
 
-1. Fork 本仓库
-2. 新建 Feat_xxx 分支
-3. 提交代码
-4. 新建 Pull Request
+**Version 1.1 (May 9th 2016)**
+- Tweaked some numbers (enemy hp, prices, etc.) **(you probably want to start over the game because of this)**.
+- A new armor!
+- Changed the ghost heart system a little bit.
+- Lowered spawning chance for entities.
+- Removed the "run away" button.
+- Shorter save code.
+- Added simple instructions.
+- Fixed sprites not appear on the dev console version of the game.
+- Bug fixes and improvements (yea I know this one is kinda annoying, but it's just minor things that you probably won't notice).
 
-
-#### 码云特技
-
-1. 使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2. 码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3. 你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4. [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5. 码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6. 码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+**Version 1.0 (April 25th 2016)**
+- Initial Release.
