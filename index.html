@@ -4,12 +4,12 @@
 
 	<!--
 	
-		Hey, you! Don't cheat!
+		嘿，你！ 不要作弊！
 			
 	-->
-	
+	<meta charset="utf-8" />
 	<meta name="theme-color" content="#3f51b5">
-	<title>Material Warrior</title>
+	<title>物质勇士 - Material Warrior</title>
 	
 	<link rel="stylesheet" href="material.min.css">
 	<link rel="stylesheet" href="style.css">
@@ -29,7 +29,7 @@
 	<script src="game.js"></script>
 	<script src="console.js"></script>
 	<script src="browser.js"></script>
-	<script src="showads.js"></script>
+<!--	<script src="showads.js"></script>-->
 	
 </head>
 <body class="mdl-color--grey-100 mdl-color-text--grey-700">
@@ -48,24 +48,24 @@
 	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 	  <header class="mdl-layout__header">
 		<div class="mdl-layout__header-row">
-		  <span class="mdl-layout-title">Material Warrior</span>
+		  <span class="mdl-layout-title">物质勇士</span>
 		</div>
 		<div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-		  <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Map</a>
-		  <a href="#scroll-tab-2" class="mdl-layout__tab">Inventory</a>
-		  <a href="#scroll-tab-3" class="mdl-layout__tab" style="display:none;" id="tab-smartphone">Smartphone</a>
+		  <a href="#scroll-tab-1" class="mdl-layout__tab is-active">地图</a>
+		  <a href="#scroll-tab-2" class="mdl-layout__tab">物品</a>
+		  <a href="#scroll-tab-3" class="mdl-layout__tab" style="display:none;" id="tab-smartphone">手机</a>
 		</div>
 	  </header>
 	  
 	  <div class="mdl-layout__drawer">
 		<img src="images/1f61b.png" class="drawer-image">
-		<span class="mdl-layout-title">Material Warrior</span>
+		<span class="mdl-layout-title">物质勇士</span>
 		<nav class="mdl-navigation">
-		  <a class="mdl-navigation__link" href="#" onclick="UI.showAlert('xp-system')"><i class="material-icons">explore</i><span>Levels &amp; XP</span></a>
-		  <a class="mdl-navigation__link" href="#" onclick="UI.showAlert('keyboard')"><i class="material-icons">keyboard</i><span>Keyboard Shortcuts</span></a>
-		  <a class="mdl-navigation__link" href="#" onclick="UI.showAlert('speedrun')" id="speedrun-mode"><i class="material-icons">directions_run</i><span>Speedrun Mode</span></a>
-		  <a class="mdl-navigation__link" href="#" onclick="UI.showAlert('settings')"><i class="material-icons">settings</i><span>Settings</span></a>
-		  <a class="mdl-navigation__link" href="#" onclick="UI.showAlert('about')"><i class="material-icons">help</i><span>About</span></a>
+		  <a class="mdl-navigation__link" href="#" onclick="UI.showAlert('xp-system')"><i class="material-icons">explore</i><span>等级 &amp; 经验</span></a>
+		  <a class="mdl-navigation__link" href="#" onclick="UI.showAlert('keyboard')"><i class="material-icons">keyboard</i><span>快捷键</span></a>
+		  <a class="mdl-navigation__link" href="#" onclick="UI.showAlert('speedrun')" id="speedrun-mode"><i class="material-icons">directions_run</i><span>竞速破关模式</span></a>
+		  <a class="mdl-navigation__link" href="#" onclick="UI.showAlert('settings')"><i class="material-icons">settings</i><span>设置</span></a>
+		  <a class="mdl-navigation__link" href="#" onclick="UI.showAlert('about')"><i class="material-icons">help</i><span>关于</span></a>
 		</nav>
 	  </div>
 	  
@@ -76,11 +76,11 @@
 			<div class="mdl-card mdl-shadow--4dp" id="speedrun-container">
 				<div class="mdl-card__supporting-text">
 					<div class="speedrun-time">
-						<div class="speedrun-title">Current Time</div>
+						<div class="speedrun-title">当前时间</div>
 						<div class="speedrun-timer" id="current-time">0:00:00.000</div>
 					</div>
 					<div class="speedrun-time">
-						<div class="speedrun-title">Speedrun Record (<span id="speedrun-cookies">0</span> Cookies)</div>
+						<div class="speedrun-title">竞速记录 (<span id="speedrun-cookies">0</span> Cookies)</div>
 						<div class="speedrun-timer" id="record-time">0:00:00.000</div>
 					</div>
 					<div style="clear: both;"></div>
@@ -92,7 +92,7 @@
 				  <div class="mdl-card__media" class="game-card">
 					<div id="mini-mapinfo">
 						<div style="float:left">
-							<span>Seed: <b id="game-seed">0</b></span><br>
+							<span>速度: <b id="game-seed">0</b></span><br>
 						</div>
 						<div style="float:right; text-align:right;">
 							<span># of rats: <b id="game-rats">0</b></span><br>
@@ -113,12 +113,12 @@
 					<div class="xp-bar"></div>
 					<div class="xp-bar green" id="xp-green" style="width:0%"></div>
 					<div style="float:left; margin-top:7px;">
-						You have <b id="player-gold">0</b> gold.<br>
+						你拥有 <b id="player-gold">0</b> 黄金.<br>
 						x: <b id="game-x">0</b> y: <b id="game-y">0</b>
 					</div>
 					<div style="float:right; text-align:right; margin-top:7px;">
-						HP: <b id="player-hp-stats">0</b> / <b id="player-maxhp-stats">0</b><br>
-						XP: <b id="player-xp-stats">0</b> / <b id="player-maxxp-stats">0</b> (Level <b id="player-lvl-stats">1</b>)
+						生命值: <b id="player-hp-stats">0</b> / <b id="player-maxhp-stats">0</b><br>
+						经验: <b id="player-xp-stats">0</b> / <b id="player-maxxp-stats">0</b> (等级 <b id="player-lvl-stats">1</b>)
 					</div>
 					<div style="clear:both;"></div><br>
 					<div id="game-log"></div>
@@ -126,10 +126,12 @@
 				</div>
 			</div>
 			
-			<div id="no-ads" style="display:none;">It would be appreciated if you disable adblock!</div>
+<!--			<div id="no-ads" style="display:none;">It would be appreciated if you disable adblock!</div>-->
+<!--
 			<div id="ads">
 				<iframe data-aa='650128' src='//ad.a-ads.com/650128?size=728x90' scrolling='no' style='width:728px; height:90px; border:0px; padding:0;overflow:hidden' allowtransparency='true'></iframe>
 			</div>
+-->
 			
 		  </div>
 		</section>
@@ -137,7 +139,7 @@
 		<section class="mdl-layout__tab-panel" id="scroll-tab-2" style="display:none;">
 		  <div class="page-content">
 			<div class="item-section">
-				<h6>WEAPON</h6>
+				<h6>武器</h6>
 				<div id="weapon-options" class="item-options mdl-shadow--2dp"></div>
 				<div class="mdl-card mdl-shadow--2dp item-card">
 				  <div class="mdl-card__title">
@@ -152,13 +154,13 @@
 			</div>
 			
 			<div class="item-section" id="head-section" style="display:none;">
-				<h6>HEAD</h6>
+				<h6>头部</h6>
 				<div id="head-options" class="item-options mdl-shadow--2dp">
-					<div class="option">None</div>
+					<div class="option">无</div>
 				</div>
 				<div class="mdl-card mdl-shadow--2dp item-card">
 				  <div class="mdl-card__title">
-					<span id="selected-head" class="item-name" onclick="UI.toggleOption('head')">None <i>&#x25BC;</i></span>
+					<span id="selected-head" class="item-name" onclick="UI.toggleOption('head')">无 <i>&#x25BC;</i></span>
 				  </div>
 				  <div class="mdl-card__media mdl-card--expand">
 					<img src="images/blank.png" id="selected-head-image">
@@ -167,19 +169,19 @@
 					Sometimes less is more.<br>
 				  </div>
 				  <div class="mdl-card__actions mdl-card--border" id="selected-head-defense">
-					<b>Defense:</b> 0
+					<b>防御:</b> 0
 				  </div>
 				</div>
 			</div>
 			
 			<div class="item-section" id="body-section" style="display:none;">
-				<h6>BODY</h6>
+				<h6>身体</h6>
 				<div id="body-options" class="item-options mdl-shadow--2dp">
-					<div class="option">None</div>
+					<div class="option">无</div>
 				</div>
 				<div class="mdl-card mdl-shadow--2dp item-card">
 				  <div class="mdl-card__title">
-					<span id="selected-body" class="item-name" onclick="UI.toggleOption('body')">None <i>&#x25BC;</i></span>
+					<span id="selected-body" class="item-name" onclick="UI.toggleOption('body')">无 <i>&#x25BC;</i></span>
 				  </div>
 				  <div class="mdl-card__media mdl-card--expand">
 					<img src="images/blank.png" id="selected-body-image">
@@ -221,24 +223,24 @@
 	
 	<div class="dialog mdl-shadow--16dp dialog-wide dialog-settings">
 		<div class="dialog-inner">
-			<div class="dialog-title">Settings</div>
+			<div class="dialog-title">设置</div>
 			<div class="dialog-content">
-				Autosave is automatically set to on each time the page is opened.<br><br>
-				<button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect" onclick="Game.saveGame(false, true)">SAVE GAME</button><br>
-				<button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect" onclick="Game.toggleAutosave()">TOGGLE AUTOSAVE</button> <span id="autosave-time" class="button-text"></span><br>
-				<button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect" onclick="Game.saveGame(true, false)">EXPORT SAVE AS TEXT</button><br>
-				<button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect" onclick="Game.loadGame(true)">IMPORT SAVE FROM TEXT</button><br>
-				<div id="soft-reset"><button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect" onclick="Game.softReset(false)">SOFT RESET</button> <span class="button-text">Resets everything except speedrun record &amp; cookies.</span></div>
-				<button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect" onclick="Game.reset()">HARD RESET</button> <span style="color:red;" class="button-text">Resets game as if you have never played before.</span><br><br>
+				每次打开页面时，自动设置为自动保存。<br><br>
+				<button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect" onclick="Game.saveGame(false, true)">保存游戏</button><br>
+				<button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect" onclick="Game.toggleAutosave()">切换自动保存</button> <span id="autosave-time" class="button-text"></span><br>
+				<button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect" onclick="Game.saveGame(true, false)">导出存档代码</button><br>
+				<button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect" onclick="Game.loadGame(true)">导入存档代码</button><br>
+				<div id="soft-reset"><button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect" onclick="Game.softReset(false)">软复位</button> <span class="button-text">重置一切，除了竞速破关 &amp; cookies.</span></div>
+				<button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect" onclick="Game.reset()">硬复位</button> <span style="color:red;" class="button-text">重置游戏，就像你从来没有玩过.</span><br><br>
 				<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="toggle-mapinfo">
 				  <input type="checkbox" id="toggle-mapinfo" class="mdl-checkbox__input" onclick="UI.toggleMapinfo()">
-				  <span class="mdl-checkbox__label" style="position:relative;top:-2px;">Show map info in game area</span>
+				  <span class="mdl-checkbox__label" style="position:relative;top:-2px;">在游戏区域显示地图信息</span>
 				</label>
 			</div>
 		</div>
 		<div class="dialog-actions">
 			<button class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="UI.hideAlert();">
-				CLOSE
+				关闭
 			</button>
 			<div style="clear:both;"></div>
 		</div>
@@ -253,7 +255,7 @@
 		</div>
 		<div class="dialog-actions">
 			<button class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="UI.hideAlert();">
-				CLOSE
+				关闭
 			</button>
 			<div style="clear:both;"></div>
 		</div>
@@ -281,7 +283,7 @@
 		</div>
 		<div class="dialog-actions">
 			<button class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="UI.hideAlert()">
-				CLOSE
+				关闭
 			</button>
 			<div style="clear:both;"></div>
 		</div>
@@ -315,7 +317,7 @@
 		</div>
 		<div class="dialog-actions">
 			<button class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="UI.hideAlert()">
-				CLOSE
+				关闭
 			</button>
 			<div style="clear:both;"></div>
 		</div>
@@ -323,7 +325,7 @@
 	
 	<div class="dialog mdl-shadow--16dp dialog-wide dialog-xp-system">
 		<div class="dialog-inner">
-			<div class="dialog-title">Levels &amp; XP</div>
+			<div class="dialog-title">等级 &amp; 经验</div>
 			<div class="dialog-content" style="max-height: 300px; overflow-y: auto;">
 				Experiences can be gained by killing enemies. Each time you level up you will gain a new ability:<br><br>
 				<div id="levels-info"></div>
@@ -331,7 +333,7 @@
 		</div>
 		<div class="dialog-actions">
 			<button class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="UI.hideAlert()">
-				CLOSE
+				关闭
 			</button>
 			<div style="clear:both;"></div>
 		</div>
@@ -348,7 +350,7 @@
 		</div>
 		<div class="dialog-actions">
 			<button class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="UI.hideAlert()">
-				CLOSE
+				关闭
 			</button>
 			<div style="clear:both;"></div>
 		</div>
@@ -356,18 +358,18 @@
 	
 	<div class="dialog mdl-shadow--16dp dialog-wide dialog-forge">
 		<div class="dialog-inner">
-			<div class="dialog-title">The Forge</div>
+			<div class="dialog-title">锻造</div>
 			<div class="dialog-content">
-				<div id="need-more-power">It seems that your hands must be stronger to be able to use the forge.</div>
+				<div id="need-more-power">似乎你的双手必须更坚固才能使用锻造。</div>
 				<div id="forge-contents" style="display:none;">
-					<div id="sharpen-scissors"><button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect" onclick="Player.forge('scissors')">SHARPEN SCISSORS</button> <span class="button-text">(<b id="sharpen-scissors-gold"></b> gold) Increases your scissors' damage.</span></div>
-					<div id="sharpen-knife"><button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect" onclick="Player.forge('knife')">SHARPEN KNIFE</button> <span class="button-text">(<b id="sharpen-knife-gold"></b> gold) Increases your knife's damage.</span></div>
+					<div id="sharpen-scissors"><button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect" onclick="Player.forge('scissors')">磨剪刀</button> <span class="button-text">(<b id="sharpen-scissors-gold"></b> 黄金) 增加剪刀的杀伤力.</span></div>
+					<div id="sharpen-knife"><button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect" onclick="Player.forge('knife')">磨剪刀</button> <span class="button-text">(<b id="sharpen-knife-gold"></b> 黄金) 增加你的刀的伤害。</span></div>
 				</div>
 			</div>
 		</div>
 		<div class="dialog-actions">
 			<button class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="UI.hideAlert()">
-				CLOSE
+				关闭
 			</button>
 			<div style="clear:both;"></div>
 		</div>
@@ -383,7 +385,7 @@
 		</div>
 		<div class="dialog-actions">
 			<button class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="UI.hideAlert()">
-				CLOSE
+				关闭
 			</button>
 			<div style="clear:both;"></div>
 		</div>
@@ -402,7 +404,7 @@
 		</div>
 		<div class="dialog-actions">
 			<button class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="UI.hideAlert()">
-				CLOSE
+				关闭
 			</button>
 			<div style="clear:both;"></div>
 		</div>
@@ -422,7 +424,7 @@
 		</div>
 		<div class="dialog-actions">
 			<button class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="UI.hideAlert()">
-				CLOSE
+				关闭
 			</button>
 			<div style="clear:both;"></div>
 		</div>
@@ -504,7 +506,7 @@
 				NEXT
 			</button>
 			<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="chat-close" onclick="UI.hideAlert()">
-				CLOSE
+				关闭
 			</button>
 			<div style="clear:both;"></div>
 		</div>
@@ -512,15 +514,15 @@
 	
 	<div class="dialog mdl-shadow--16dp dialog-wide dialog-package">
 		<div class="dialog-inner">
-			<div class="dialog-title" id="package-title">A Package!</div>
+			<div class="dialog-title" id="package-title">一个包裹!</div>
 			<div class="dialog-content" id="package-content"></div>
 		</div>
 		<div class="dialog-actions">
 			<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="package-take">
-				TAKE ITEM
+				拾取物品
 			</button>
 			<button class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="UI.hideAlert()">
-				CLOSE
+				关闭
 			</button>
 			<div style="clear:both;"></div>
 		</div>
@@ -528,12 +530,12 @@
 	
 	<div class="dialog mdl-shadow--16dp dialog-wide dialog-meditate">
 		<div class="dialog-inner">
-			<div class="dialog-title">Meditate</div>
+			<div class="dialog-title">冥想</div>
 			<div class="dialog-content" id="meditate-content"></div>
 		</div>
 		<div class="dialog-actions">
 			<button class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="Player.training('stop-meditate')">
-				STOP MEDITATING
+				停止冥想
 			</button>
 			<div style="clear:both;"></div>
 		</div>
@@ -541,18 +543,18 @@
 	
 	<div class="dialog mdl-shadow--16dp dialog-wide dialog-locked-house">
 		<div class="dialog-inner">
-			<div class="dialog-title">A House</div>
+			<div class="dialog-title">一栋房子</div>
 			<div class="dialog-content" id="house-content"></div>
 		</div>
 		<div class="dialog-actions">
 			<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="give-pizza">
-				GIVE PIZZA
+				给披萨
 			</button>
 			<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="enter-portal" onclick="Player.negativeZone()">
-				ENTER PORTAL
+				进入传送门
 			</button>
 			<button class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="UI.hideAlert()">
-				CLOSE
+				关闭
 			</button>
 			<div style="clear:both;"></div>
 		</div>
@@ -560,17 +562,17 @@
 	
 	<div class="dialog mdl-shadow--16dp dialog-wide dialog-store">
 		<div class="dialog-inner">
-			<div class="dialog-title">Convenience Store</div>
+			<div class="dialog-title">便利店</div>
 			<div class="dialog-content">
-				<div id="buy-teleporter"><button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect" onclick="Player.buy('teleporter')">BUY TELEPORT MACHINE</button> <span class="button-text">(<b>50,000</b> gold)</span></div>
-				<div id="buy-blue-heart"><button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect" onclick="Player.buy('blue-heart')">BUY A BLUE HEART</button> <span class="button-text">(<b>100,000</b> gold)</span></div>
-				<div id="buy-smartphone"><button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect" onclick="Player.buy('smartphone')">BUY A SMARTPHONE</button> <span class="button-text">(<b>10,000,000</b> gold)</span></div><br>
+				<div id="buy-teleporter"><button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect" onclick="Player.buy('teleporter')">BUY TELEPORT MACHINE</button> <span class="button-text">(<b>50,000</b> 黄金)</span></div>
+				<div id="buy-blue-heart"><button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect" onclick="Player.buy('blue-heart')">BUY A BLUE HEART</button> <span class="button-text">(<b>100,000</b> 黄金)</span></div>
+				<div id="buy-smartphone"><button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect" onclick="Player.buy('smartphone')">BUY A SMARTPHONE</button> <span class="button-text">(<b>10,000,000</b> 黄金)</span></div><br>
 				The teleport machine will appear near your respawn area.
 			</div>
 		</div>
 		<div class="dialog-actions">
 			<button class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="UI.hideAlert()">
-				CLOSE
+				关闭
 			</button>
 			<div style="clear:both;"></div>
 		</div>
@@ -587,7 +589,7 @@
 		</div>
 		<div class="dialog-actions">
 			<button class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="UI.hideAlert()">
-				CLOSE
+				关闭
 			</button>
 			<div style="clear:both;"></div>
 		</div>
@@ -600,7 +602,7 @@
 		</div>
 		<div class="dialog-actions">
 			<button class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="UI.hideAlert()">
-				CLOSE
+				关闭
 			</button>
 			<div style="clear:both;"></div>
 		</div>
@@ -619,7 +621,7 @@
 		</div>
 		<div class="dialog-actions">
 			<button class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="UI.hideAlert()">
-				CLOSE
+				关闭
 			</button>
 			<div style="clear:both;"></div>
 		</div>
@@ -643,7 +645,7 @@
 		</div>
 		<div class="dialog-actions">
 			<button class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="UI.hideAlert()">
-				CLOSE
+				关闭
 			</button>
 			<div style="clear:both;"></div>
 		</div>
@@ -666,7 +668,7 @@
 				CRAFT ARMOR
 			</button>
 			<button class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="UI.hideAlert()">
-				CLOSE
+				关闭
 			</button>
 			<div style="clear:both;"></div>
 		</div>
@@ -685,6 +687,10 @@
 		ga('send', 'event', 'HasAdblock', hasAdblock ? 'Yes' : 'No', {'nonInteraction': true})
 		
 	</script>
-	
+	<!--客服 开始-->
+<script src="//likexia.gitee.io/game/js/jquery.min.js"></script>
+<link rel="stylesheet" href="//likexia.gitee.io/game/css/kf.css" type="text/css" media="screen" charset="utf-8">
+<script src="//likexia.gitee.io/game/js/kf.js"></script>
+<!-- 客服 结束 -->
 </body>
 </html>

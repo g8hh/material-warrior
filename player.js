@@ -265,7 +265,7 @@ var Player = {
 					document.getElementById("enter-portal").style.display = "none";
 					if(!Player.save.hasLoan) {
 						if(tools.arrayContains(Game.save.happyPizzaCustomers,tools.arrayIndex(Game.pizzaCustomers,x+","+y))) {
-							document.getElementById("house-content").innerHTML = "Thanks for the pizza!";
+							document.getElementById("house-content").innerHTML = "谢谢你的披萨!";
 						}
 						else if(tools.arrayContains(Game.pizzaCustomers,x+","+y) && Player.numItems("pizza")>0) {
 							if(tools.arrayIndex(Game.pizzaCustomers,x+","+y)==9) {
@@ -585,7 +585,7 @@ var Player = {
 	
 		var html="";
 		document.getElementById("package-take").style.display = "block";
-		document.getElementById("package-take").innerHTML = "TAKE ITEM";
+		document.getElementById("package-take").innerHTML = "拾取物品";
 		
 		if(x==0 && y==116) {
 			html = "This package contains a blue heart!";
@@ -611,7 +611,7 @@ var Player = {
 			var message = "<div style='font-family:monospace;padding:30px;'>List of customers:<br>"+customers.join("<br>")+"</div>";
 			if(!Player.save.tookPizzas) {
 				html = "This package contains 10 pizzas and a message:"+message+"Open settings to show player coordinates.";
-				document.getElementById("package-take").innerHTML = "TAKE PIZZAS";
+				document.getElementById("package-take").innerHTML = "吃比萨";
 				document.getElementById("package-take").addEventListener("click", function(){Player.takeItem("pizzas",x,y)});
 			}
 			else {
@@ -620,12 +620,12 @@ var Player = {
 			}
 		}
 		else if(x>=5 && y>=5 && x<=95 && y<=50) {
-			html = "This package contains 1 xp. There are 10 similar packages in this area, find them all!";
+			html = "这个包裹里面有1点经验。这个区域有10个类似的包裹，全部找到它们吧!";
 			document.getElementById("package-take").addEventListener("click", function(){Player.takeItem("xp",x,y)});
 		}
 		else {
-			html = "This package contains nothing :(";
-			document.getElementById("package-take").innerHTML = "REMOVE PACKAGE";
+			html = "这个包裹里什么都没有 :(";
+			document.getElementById("package-take").innerHTML = "移除包裹";
 			document.getElementById("package-take").addEventListener("click", function(){Player.takeItem("none",x,y)});
 		}
 		
@@ -644,7 +644,7 @@ var Player = {
 			Player.save.hp += 400;
 			Player.save.maxhp += 400;
 			Player.save.spawn2 = true;
-			UI.addLog("Your took a blue heart.");
+			UI.addLog("你有一颗忧郁的心。");
 			UI.hideAlert();
 		}
 		else if(what=="s_heart") {
@@ -652,13 +652,13 @@ var Player = {
 			Player.addItem("s_heart", 1);
 			if(Player.save.regenTimeout>0)Player.save.regenTimeout -= 100;
 			else Player.save.regenHp++;
-			UI.addLog("Your took a shiny heart.");
+			UI.addLog("你有一颗闪亮的心。");
 			Player.move(x,y);
 		}
 		else if(what=="pizzas") {
 			if(!Player.save.tookPizzas) {
 				Player.addItem("pizza", 10);
-				UI.addLog("Your took <b>10</b> pizzas.");
+				UI.addLog("你得到了 <b>10</b> 披萨。");
 				Player.save.tookPizzas = true;
 				UI.hideAlert();
 			}
@@ -667,9 +667,9 @@ var Player = {
 			Game.removeEntity(x,y);
 			var oldLevel = Player.getLevel();
 			Player.save.xp += 1;
-			UI.addLog("Your got <b>1</b> xp.");
+			UI.addLog("你得到了 <b>1</b> 经验。");
 			UI.hideAlert();
-			if(Player.getLevel() > oldLevel) UI.addLog("Level up! Check the sidebar to see your new ability.");
+			if(Player.getLevel() > oldLevel) UI.addLog("升级了！ 检查侧栏以查看您的新能力。");
 		}
 		else if(what=="none") {
 			Game.removeEntity(x,y);
@@ -835,17 +835,17 @@ scroll='   _____________________________________________\n\
 		document.getElementById("craft-potion").style.display = "none";
 		
 		if(action=="armor") {
-			document.getElementById("temple-title").innerHTML = "Dragon Armor";
+			document.getElementById("temple-title").innerHTML = "龙盔甲";
 			document.getElementById("temple-armor").style.display = "block";
 			document.getElementById("craft-armor").style.display = "block";
 		}
 		else if(action=="gun") {
 			Player.save.devAway = false;
-			document.getElementById("temple-title").innerHTML = "Infinity Gun";
+			document.getElementById("temple-title").innerHTML = "无限枪";
 			document.getElementById("temple-gun").style.display = "block";
 		}
 		else if(action=="potion") {
-			document.getElementById("temple-title").innerHTML = "Blue Heart Potion";
+			document.getElementById("temple-title").innerHTML = "蓝心药水";
 			document.getElementById("temple-potion").style.display = "block";
 			document.getElementById("craft-potion").style.display = "block";
 		}

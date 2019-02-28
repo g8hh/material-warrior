@@ -202,9 +202,9 @@ var Game = {
 						Game.autosave = 30;
 						Game.saveGame(false, false);
 					}
-					document.getElementById("autosave-time").innerHTML = "Game autosaves in "+Game.autosave+" seconds.";
+					document.getElementById("autosave-time").innerHTML = "游戏会在 "+Game.autosave+" 秒后自动保存。";
 				}
-				else document.getElementById("autosave-time").innerHTML = "Autosave is off.";
+				else document.getElementById("autosave-time").innerHTML = "自动保存关闭.";
 			}, 1000);
 			
 			if(Game.speedrun) requestAnimationFrame(Game.speedrunLoop);
@@ -225,7 +225,7 @@ var Game = {
 		if(!asText) {
 			localStorage.materialwarriorsave = btoa(JSON.stringify(stringtosave));
 			localStorage.speedrunHigh = btoa(JSON.stringify(Game.speedrunHigh));
-			if(alertConfirm) alert('Game saved!');
+			if(alertConfirm) alert('游戏已保存!');
 		}
 		else {
 			//prompt("Save the code somewhere safe!", btoa(JSON.stringify(stringtosave)));
