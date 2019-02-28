@@ -146,7 +146,7 @@ var UI = {
 		
 		var selectedWeapon = Battle.getWeaponInfo(Player.save.weapon);
 		document.getElementById("selected-weapon").innerHTML = cnItem(tools.upperFirst(selectedWeapon.name))+" <i>&#x25BC;</i>";
-		document.getElementById("selected-weapon-desc").innerHTML = selectedWeapon.description;
+		document.getElementById("selected-weapon-desc").innerHTML = cnItem(selectedWeapon.description);
 		document.getElementById("selected-weapon-damage").innerHTML = "<b>伤害:</b> "+tools.num(selectedWeapon.damage);
 		document.getElementById("selected-weapon-image").src = "images/"+selectedWeapon.image+".png";
 		
