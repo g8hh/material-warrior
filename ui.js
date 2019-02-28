@@ -145,21 +145,21 @@ var UI = {
 		if(Battle.getWeaponInfo("fists").damage>=5)document.getElementById("need-more-power").style.display = "none", document.getElementById("forge-contents").style.display = "block";
 		
 		var selectedWeapon = Battle.getWeaponInfo(Player.save.weapon);
-		document.getElementById("selected-weapon").innerHTML = tools.upperFirst(selectedWeapon.name)+" <i>&#x25BC;</i>";
+		document.getElementById("selected-weapon").innerHTML = cnItem(tools.upperFirst(selectedWeapon.name))+" <i>&#x25BC;</i>";
 		document.getElementById("selected-weapon-desc").innerHTML = selectedWeapon.description;
-		document.getElementById("selected-weapon-damage").innerHTML = "<b>Damage:</b> "+tools.num(selectedWeapon.damage);
+		document.getElementById("selected-weapon-damage").innerHTML = "<b>伤害:</b> "+tools.num(selectedWeapon.damage);
 		document.getElementById("selected-weapon-image").src = "images/"+selectedWeapon.image+".png";
 		
 		var selectedHead = Battle.getHeadInfo(Player.save.head);
 		document.getElementById("selected-head").innerHTML = tools.upperFirst(selectedHead.name)+" <i>&#x25BC;</i>";
 		document.getElementById("selected-head-desc").innerHTML = selectedHead.description;
-		document.getElementById("selected-head-defense").innerHTML = "<b>Damage Reduction:</b> "+selectedHead.reduction+"%";
+		document.getElementById("selected-head-defense").innerHTML = "<b>伤害减免:</b> "+selectedHead.reduction+"%";
 		document.getElementById("selected-head-image").src = "images/"+selectedHead.image+".png";
 		
 		var selectedBody = Battle.getBodyInfo(Player.save.body);
 		document.getElementById("selected-body").innerHTML = tools.upperFirst(selectedBody.name)+" <i>&#x25BC;</i>";
 		document.getElementById("selected-body-desc").innerHTML = selectedBody.description;
-		document.getElementById("selected-body-defense").innerHTML = "<b>Damage Reduction:</b> "+selectedBody.reduction+"%";
+		document.getElementById("selected-body-defense").innerHTML = "<b>伤害减免:</b> "+selectedBody.reduction+"%";
 		document.getElementById("selected-body-image").src = "images/"+selectedBody.image+".png";
 		
 		document.getElementById("weapon-options").innerHTML = "";
@@ -179,22 +179,22 @@ var UI = {
 		
 		for(i=0;i<Player.getInventory().weapon.length;i++) {
 			var item = Player.getInventory().weapon[i];
-			document.getElementById("weapon-options").innerHTML += '<div class="option" onclick="Player.setWeapon(\''+item+'\')">'+tools.upperFirst(Battle.getWeaponInfo(item).name)+'</div>';
+			document.getElementById("weapon-options").innerHTML += '<div class="option" onclick="Player.setWeapon(\''+item+'\')">'+cnItem(tools.upperFirst(Battle.getWeaponInfo(item).name))+'</div>';
 		}
 		
 		if(Player.getInventory().head.length>1)document.getElementById("head-section").style.display='block';
 		for(i=0;i<Player.getInventory().head.length;i++) {
 			var item = Player.getInventory().head[i];
-			document.getElementById("head-options").innerHTML += '<div class="option" onclick="Player.setHead(\''+item+'\')">'+tools.upperFirst(Battle.getHeadInfo(item).name)+'</div>';
+			document.getElementById("head-options").innerHTML += '<div class="option" onclick="Player.setHead(\''+item+'\')">'+cnItem(tools.upperFirst(Battle.getHeadInfo(item).name))+'</div>';
 		}
 		
 		if(Player.getInventory().body.length>1)document.getElementById("body-section").style.display='block';
 		for(i=0;i<Player.getInventory().body.length;i++) {
 			var item = Player.getInventory().body[i];
-			document.getElementById("body-options").innerHTML += '<div class="option" onclick="Player.setBody(\''+item+'\')">'+tools.upperFirst(Battle.getBodyInfo(item).name)+'</div>';
+			document.getElementById("body-options").innerHTML += '<div class="option" onclick="Player.setBody(\''+item+'\')">'+cnItem(tools.upperFirst(Battle.getBodyInfo(item).name))+'</div>';
 		}
 		
-		document.getElementById("inventory-items").innerHTML = "<h6>ITEMS</h6>";
+		document.getElementById("inventory-items").innerHTML = "<h6>物品</h6>";
 		
 		for(k in Player.getInventory().item) {
 			var itemInfo = Player.getItemInfo(k);
