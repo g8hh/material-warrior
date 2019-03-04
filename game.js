@@ -189,8 +189,8 @@ var Game = {
 			UI.update();
 			UI.toggleMapinfo();
 			UI.speedrun();
-			UI.addLog("Use WASD / arrow keys to move, bump objects to interact.");
-			UI.addLog("You spawned in this world.");
+			UI.addLog("使用WASD /箭头键进行移动，碰撞对象进行交互。");
+			UI.addLog("你在这个世界上诞生了。");
 			Player.regen();
 			console2.start();
 			browser.load();

@@ -349,7 +349,7 @@ var Battle = {
 			document.getElementById("player-hp").innerHTML = tools.num(Player.save.hp);
 			document.getElementById("player-maxhp").innerHTML = tools.num(Player.save.maxhp);
 			if(Player.save.maxhp >= 1000000000000) document.getElementById("player-maxhp").innerHTML = "a lot";
-			document.getElementById("player-weapon").innerHTML = tools.upperFirst(selectedWeapon.name);
+			document.getElementById("player-weapon").innerHTML = cnItem(tools.upperFirst(selectedWeapon.name));
 			document.getElementById("player-damage").innerHTML = tools.num(selectedWeapon.damage);
 			document.getElementById("player-bar").style.width = Player.save.hp/Player.save.maxhp*72+"px";
 			document.getElementById("player-img").style.opacity = 1;
@@ -507,7 +507,7 @@ var Battle = {
 			var selectedWeapon = Battle.getWeaponInfo(Player.getWeapon());
 			
 			Battle.playerisattacking = true;
-			UI.disable("attack-button",2,"ATTACK!");
+			UI.disable("attack-button",2,"攻击!");
 			
 			var duration = -20;
 			var animaton = setInterval(function() {
@@ -522,7 +522,7 @@ var Battle = {
 					else missChance = .1;
 					
 					if(Math.random()<missChance) {
-						UI.showDamage(20,20,"enemy-anim","<span style='color:red;'>miss</span>");
+						UI.showDamage(20,20,"enemy-anim","<span style='color:red;'>未命中</span>");
 					}
 					else {
 						var zedamage = selectedWeapon.damage * (Player.numItems("cookie") + 1);
@@ -658,19 +658,19 @@ var Battle = {
 			var xpGained = tools.getRandomInt(enemyInfo.xp[0], enemyInfo.xp[1]);
 			Player.save.gold += loot;
 			Player.save.xp += xpGained;
-			UI.addLog("You killed "+enemyInfo.article+" "+enemyInfo.name+" for <b>"+tools.num(loot)+"</b> gold, <b>"+tools.num(xpGained)+"</b> xp and got a dragon corpse.");
+			UI.addLog("你杀死了 "+enemyInfo.article+" "+cnItem(enemyInfo.name)+" 得到了 <b>"+tools.num(loot)+"</b> 黄金, <b>"+tools.num(xpGained)+"</b> 经验，还有一具龙的尸体。");
 			Player.addItem("dragon-corpse", 1);
 		}
 		else if(enemy.name=="boss") {
 			var loot = tools.getRandomInt(enemyInfo.gold[0], enemyInfo.gold[1]);
 			Player.save.gold += loot;
-			UI.addLog("You killed "+enemyInfo.article+" "+enemyInfo.name+" for <b>"+tools.num(loot)+"</b> gold!");
+			UI.addLog("你杀死了 "+enemyInfo.article+" "+cnItem(enemyInfo.name)+" 得到了 <b>"+tools.num(loot)+"</b> 黄金!");
 			UI.addLog("Or not?");
 			Game.addEnemy(x,y,"boss2");
 		}
 		else if(enemy.name=="boss2") {
 			Player.save.gold = Infinity;
-			UI.addLog("You killed "+enemyInfo.article+" "+enemyInfo.name+" for <b>Infinity</b> gold!");
+			UI.addLog("你杀死了 "+enemyInfo.article+" "+cnItem(enemyInfo.name)+" for <b>无限</b> 黄金!");
 			Game.addEnemy(x,y,"boss3");
 		}
 		else if(enemy.name=="boss3") {
@@ -692,7 +692,7 @@ var Battle = {
 				ga('send', 'event', 'winGame', 'Yes');
 			}
 			
-			UI.addLog("<b>You killed "+enemyInfo.article+" "+enemyInfo.name+" for good!</b>");
+			UI.addLog("<b>你杀死了 "+enemyInfo.article+" "+cnItem(enemyInfo.name)+" 永久地!</b>");
 			Player.addItem("cookie", 1);
 			UI.speedrun();
 			
@@ -702,7 +702,7 @@ var Battle = {
 			var xpGained = tools.getRandomInt(enemyInfo.xp[0], enemyInfo.xp[1]);
 			Player.save.gold += loot;
 			Player.save.xp += xpGained;
-			UI.addLog("You killed "+enemyInfo.article+" "+enemyInfo.name+" for <b>"+tools.num(loot)+"</b> gold and gained <b>"+tools.num(xpGained)+"</b> xp.");
+			UI.addLog("你杀死了 "+enemyInfo.article+" "+cnItem(enemyInfo.name)+" 得到了 <b>"+tools.num(loot)+"</b> 黄金和获得了 <b>"+tools.num(xpGained)+"</b> 经验。");
 		}
 		
 		if(Player.getLevel() > oldLevel) UI.addLog("Level up! Check the sidebar to see your new ability.");

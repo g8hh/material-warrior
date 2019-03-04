@@ -151,8 +151,8 @@ var UI = {
 		document.getElementById("selected-weapon-image").src = "images/"+selectedWeapon.image+".png";
 		
 		var selectedHead = Battle.getHeadInfo(Player.save.head);
-		document.getElementById("selected-head").innerHTML = tools.upperFirst(selectedHead.name)+" <i>&#x25BC;</i>";
-		document.getElementById("selected-head-desc").innerHTML = selectedHead.description;
+		document.getElementById("selected-head").innerHTML = cnItem(tools.upperFirst(selectedHead.name))+" <i>&#x25BC;</i>";
+		document.getElementById("selected-head-desc").innerHTML = cnItem(selectedHead.description);
 		document.getElementById("selected-head-defense").innerHTML = "<b>伤害减免:</b> "+selectedHead.reduction+"%";
 		document.getElementById("selected-head-image").src = "images/"+selectedHead.image+".png";
 		

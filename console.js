@@ -143,7 +143,7 @@ var developer = {
 						console.log("There you have it!");
 						UI.addLog("You bought an infinity gun.");
 					}
-					else console.log("%cNot enough gold!", styles.error);
+					else console.log("%c没有足够的黄金！", styles.error);
 				}
 				else console.log("%cYou already have an infinity gun!", styles.error);
 			}

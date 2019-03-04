@@ -358,7 +358,7 @@ var browser = {
 				}
 			}
 		}
-		else alert('Not enough gold!');
+		else alert('没有足够的黄金！');
 		
 		UI.update();
 		
