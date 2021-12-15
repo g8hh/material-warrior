@@ -189,8 +189,8 @@ var Game = {
 			UI.update();
 			UI.toggleMapinfo();
 			UI.speedrun();
-			UI.addLog("使用WASD /箭头键进行移动，碰撞对象进行交互。");
-			UI.addLog("你在这个世界上诞生了。");
+			UI.addLog("Use WASD / arrow keys to move, bump objects to interact.");
+			UI.addLog("You spawned in this world.");
 			Player.regen();
 			console2.start();
 			browser.load();
@@ -202,9 +202,9 @@ var Game = {
 						Game.autosave = 30;
 						Game.saveGame(false, false);
 					}
-					document.getElementById("autosave-time").innerHTML = "游戏会在 "+Game.autosave+" 秒后自动保存。";
+					document.getElementById("autosave-time").innerHTML = "Game autosaves in "+Game.autosave+" seconds.";
 				}
-				else document.getElementById("autosave-time").innerHTML = "自动保存关闭.";
+				else document.getElementById("autosave-time").innerHTML = "Autosave is off.";
 			}, 1000);
 			
 			if(Game.speedrun) requestAnimationFrame(Game.speedrunLoop);
@@ -225,7 +225,7 @@ var Game = {
 		if(!asText) {
 			localStorage.materialwarriorsave = btoa(JSON.stringify(stringtosave));
 			localStorage.speedrunHigh = btoa(JSON.stringify(Game.speedrunHigh));
-			if(alertConfirm) alert('游戏已保存!');
+			if(alertConfirm) alert('Game saved!');
 		}
 		else {
 			//prompt("Save the code somewhere safe!", btoa(JSON.stringify(stringtosave)));

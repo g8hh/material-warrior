@@ -1,5 +1,4 @@
-# 物质勇士（Material Warrior）
-
+# Material Warrior
 Where an incremental game meets material design(ish) and, of course, emojis.
 
 Play the game here: http://gamehelp16.github.io/material-warrior/

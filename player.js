@@ -265,7 +265,7 @@ var Player = {
 					document.getElementById("enter-portal").style.display = "none";
 					if(!Player.save.hasLoan) {
 						if(tools.arrayContains(Game.save.happyPizzaCustomers,tools.arrayIndex(Game.pizzaCustomers,x+","+y))) {
-							document.getElementById("house-content").innerHTML = "谢谢你的披萨!";
+							document.getElementById("house-content").innerHTML = "Thanks for the pizza!";
 						}
 						else if(tools.arrayContains(Game.pizzaCustomers,x+","+y) && Player.numItems("pizza")>0) {
 							if(tools.arrayIndex(Game.pizzaCustomers,x+","+y)==9) {
@@ -373,7 +373,7 @@ var Player = {
 				Player.save.inventory.weapon.push("scissors");
 				UI.addLog("You bought scissors for <b>5</b> gold.");
 			}
-			else { alert('没有足够的黄金！'); }
+			else { alert('Not enough gold!'); }
 		}
 		else if(item=="knife") {
 			if(Player.save.gold>=17) {
@@ -381,7 +381,7 @@ var Player = {
 				Player.save.inventory.weapon.push("knife");
 				UI.addLog("You bought a knife for <b>17</b> gold.");
 			}
-			else { alert('没有足够的黄金！'); }
+			else { alert('Not enough gold!'); }
 		}
 		else if(item=="apple") {
 			if(Player.save.gold>=50) {
@@ -389,7 +389,7 @@ var Player = {
 				Player.save.inventory.item.apple++;
 				UI.addLog("You bought an apple for <b>50</b> gold.");
 			}
-			else { alert('没有足够的黄金！'); }
+			else { alert('Not enough gold!'); }
 		}
 		else if(item=="apple-10") {
 			if(Player.save.gold>=475) {
@@ -397,7 +397,7 @@ var Player = {
 				Player.save.inventory.item.apple+=10;
 				UI.addLog("You bought 10 apples for <b>475</b> gold.");
 			}
-			else { alert('没有足够的黄金！'); }
+			else { alert('Not enough gold!'); }
 		}
 		else if(item=="headphones") {
 			if(Player.save.gold>=50) {
@@ -405,7 +405,7 @@ var Player = {
 				Player.save.inventory.head.push("headphones");
 				UI.addLog("You bought a pair of headphones for <b>50</b> gold.");
 			}
-			else { alert('没有足够的黄金！'); }
+			else { alert('Not enough gold!'); }
 		}
 		else if(item=="magic-hat") {
 			if(Player.save.gold>=750) {
@@ -413,7 +413,7 @@ var Player = {
 				Player.save.inventory.head.push("magic-hat");
 				UI.addLog("You bought a magic hat for <b>750</b> gold.");
 			}
-			else { alert('没有足够的黄金！'); }
+			else { alert('Not enough gold!'); }
 		}
 		else if(item=="heart-armor") {
 			if(Player.save.gold>=100000) {
@@ -421,7 +421,7 @@ var Player = {
 				Player.save.inventory.body.push("heart-armor");
 				UI.addLog("You bought a heart armor for <b>100,000</b> gold.");
 			}
-			else { alert('没有足够的黄金！'); }
+			else { alert('Not enough gold!'); }
 		}
 		else if(item=="teleporter" && !Player.save.inventory.thing.teleporter) {
 			if(Player.save.gold>=50000) {
@@ -431,7 +431,7 @@ var Player = {
 				Game.addTile(50,115,true,"TP");
 				Game.addTile(50,263,true,"TP");
 			}
-			else { alert('没有足够的黄金！'); }
+			else { alert('Not enough gold!'); }
 		}
 		else if(item=="blue-heart") {
 			if(Player.save.gold>=100000) {
@@ -442,7 +442,7 @@ var Player = {
 				UI.addLog("Your bought a blue heart for <b>100,000</b> gold.");
 				Player.save.spawn2 = true;
 			}
-			else { alert('没有足够的黄金！'); }
+			else { alert('Not enough gold!'); }
 		}
 		else if(item=="smartphone") {
 			if(Player.save.gold>=10000000) {
@@ -450,7 +450,7 @@ var Player = {
 				Player.save.hasSmartphone = true;
 				UI.addLog("You bought a smartphone for <b>10,000,000</b> gold.");
 			}
-			else { alert('没有足够的黄金！'); }
+			else { alert('Not enough gold!'); }
 		}
 		UI.update();
 	},
@@ -563,7 +563,7 @@ var Player = {
 				UI.addLog("Your scissors now deal <b>"+tools.num(totalDmg)+"</b> damage.");
 				UI.update();
 			}
-			else { alert('没有足够的黄金！'); }
+			else { alert('Not enough gold!'); }
 		}
 		else if(what=="knife") {
 			var damage = Battle.getWeaponInfo("knife").damage;
@@ -577,7 +577,7 @@ var Player = {
 				UI.addLog("Your knife now deals <b>"+tools.num(totalDmg)+"</b> damage.");
 				UI.update();
 			}
-			else { alert('没有足够的黄金！'); }
+			else { alert('Not enough gold!'); }
 		}
 	},
 	
@@ -585,7 +585,7 @@ var Player = {
 	
 		var html="";
 		document.getElementById("package-take").style.display = "block";
-		document.getElementById("package-take").innerHTML = "拾取物品";
+		document.getElementById("package-take").innerHTML = "TAKE ITEM";
 		
 		if(x==0 && y==116) {
 			html = "This package contains a blue heart!";
@@ -611,7 +611,7 @@ var Player = {
 			var message = "<div style='font-family:monospace;padding:30px;'>List of customers:<br>"+customers.join("<br>")+"</div>";
 			if(!Player.save.tookPizzas) {
 				html = "This package contains 10 pizzas and a message:"+message+"Open settings to show player coordinates.";
-				document.getElementById("package-take").innerHTML = "吃比萨";
+				document.getElementById("package-take").innerHTML = "TAKE PIZZAS";
 				document.getElementById("package-take").addEventListener("click", function(){Player.takeItem("pizzas",x,y)});
 			}
 			else {
@@ -620,12 +620,12 @@ var Player = {
 			}
 		}
 		else if(x>=5 && y>=5 && x<=95 && y<=50) {
-			html = "这个包裹里面有1点经验。这个区域有10个类似的包裹，全部找到它们吧!";
+			html = "This package contains 1 xp. There are 10 similar packages in this area, find them all!";
 			document.getElementById("package-take").addEventListener("click", function(){Player.takeItem("xp",x,y)});
 		}
 		else {
-			html = "这个包裹里什么都没有 :(";
-			document.getElementById("package-take").innerHTML = "移除包裹";
+			html = "This package contains nothing :(";
+			document.getElementById("package-take").innerHTML = "REMOVE PACKAGE";
 			document.getElementById("package-take").addEventListener("click", function(){Player.takeItem("none",x,y)});
 		}
 		
@@ -644,7 +644,7 @@ var Player = {
 			Player.save.hp += 400;
 			Player.save.maxhp += 400;
 			Player.save.spawn2 = true;
-			UI.addLog("你有一颗忧郁的心。");
+			UI.addLog("Your took a blue heart.");
 			UI.hideAlert();
 		}
 		else if(what=="s_heart") {
@@ -652,13 +652,13 @@ var Player = {
 			Player.addItem("s_heart", 1);
 			if(Player.save.regenTimeout>0)Player.save.regenTimeout -= 100;
 			else Player.save.regenHp++;
-			UI.addLog("你有一颗闪亮的心。");
+			UI.addLog("Your took a shiny heart.");
 			Player.move(x,y);
 		}
 		else if(what=="pizzas") {
 			if(!Player.save.tookPizzas) {
 				Player.addItem("pizza", 10);
-				UI.addLog("你得到了 <b>10</b> 披萨。");
+				UI.addLog("Your took <b>10</b> pizzas.");
 				Player.save.tookPizzas = true;
 				UI.hideAlert();
 			}
@@ -667,9 +667,9 @@ var Player = {
 			Game.removeEntity(x,y);
 			var oldLevel = Player.getLevel();
 			Player.save.xp += 1;
-			UI.addLog("你得到了 <b>1</b> 经验。");
+			UI.addLog("Your got <b>1</b> xp.");
 			UI.hideAlert();
-			if(Player.getLevel() > oldLevel) UI.addLog("升级了！ 检查侧栏以查看您的新能力。");
+			if(Player.getLevel() > oldLevel) UI.addLog("Level up! Check the sidebar to see your new ability.");
 		}
 		else if(what=="none") {
 			Game.removeEntity(x,y);
@@ -820,7 +820,7 @@ scroll='   _____________________________________________\n\
 					UI.addLog("You paid your loan.");
 					UI.hideAlert();
 				}
-				else { alert('没有足够的黄金！'); }
+				else { alert('Not enough gold!'); }
 			}
 		}
 		UI.update();
@@ -835,17 +835,17 @@ scroll='   _____________________________________________\n\
 		document.getElementById("craft-potion").style.display = "none";
 		
 		if(action=="armor") {
-			document.getElementById("temple-title").innerHTML = "龙盔甲";
+			document.getElementById("temple-title").innerHTML = "Dragon Armor";
 			document.getElementById("temple-armor").style.display = "block";
 			document.getElementById("craft-armor").style.display = "block";
 		}
 		else if(action=="gun") {
 			Player.save.devAway = false;
-			document.getElementById("temple-title").innerHTML = "无限枪";
+			document.getElementById("temple-title").innerHTML = "Infinity Gun";
 			document.getElementById("temple-gun").style.display = "block";
 		}
 		else if(action=="potion") {
-			document.getElementById("temple-title").innerHTML = "蓝心药水";
+			document.getElementById("temple-title").innerHTML = "Blue Heart Potion";
 			document.getElementById("temple-potion").style.display = "block";
 			document.getElementById("craft-potion").style.display = "block";
 		}
