@@ -606,13 +606,13 @@ var Battle = {
 			var enemy = Game.getEntity(x,y);
 			
 			if(enemy.name == "boss2" || enemy.name == "boss3") {
-				alert('You can\'t use the gun against the boss anymore!');
+				alert('你不能再用枪对付Boss了！');
 			}
 			else if(enemy.name=="ghost") {
-				alert("I doubt you can shoot ghosts..");
+				alert("我怀疑你能射鬼..");
 			}
 			else {
-				if(confirm('Are you sure to shoot using the infinity gun?')) {
+				if(confirm('你确定用无限远枪射击吗？')) {
 					
 					Player.removeItem("gun", 1);
 					enemy.hp = 0;

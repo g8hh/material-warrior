@@ -225,7 +225,7 @@ var Game = {
 		if(!asText) {
 			localStorage.materialwarriorsave = btoa(JSON.stringify(stringtosave));
 			localStorage.speedrunHigh = btoa(JSON.stringify(Game.speedrunHigh));
-			if(alertConfirm) alert('Game saved!');
+			if(alertConfirm) alert('游戏已保存！');
 		}
 		else {
 			//prompt("Save the code somewhere safe!", btoa(JSON.stringify(stringtosave)));
@@ -240,8 +240,8 @@ var Game = {
 		
 		savedstring = "";
 		if(fromText) {
-			if(!confirm("Importing game from text will override your current save, continue?")) return;
-			savedstring = JSON.parse(atob(prompt("Enter save code")));
+			if(!confirm("从文本导入游戏存档将覆盖您当前的进度，继续吗？")) return;
+			savedstring = JSON.parse(atob(prompt("粘贴你的存档")));
 			if(savedstring != "") {
 				Game.applySave(savedstring);
 				Game.saveGame(false, false);
@@ -330,11 +330,11 @@ var Game = {
 	},
 	
 	reset: function() {
-		if(confirm("Are you sure to hard reset? This action can't be undone!")) {
-			if(prompt("Type \"HARD RESET\" to reset your game") == "HARD RESET") {
+		if(confirm("你确定要硬重置？ 此操作无法撤消！")) {
+			if(prompt("输入 \"HARD RESET\" 以确认") == "HARD RESET") {
 				localStorage.removeItem("materialwarriorsave");
 				localStorage.removeItem("speedrunHigh");
-				alert('Game has been hard reset!');
+				alert('游戏已经硬重置!');
 				window.location.reload();
 			}
 		}
@@ -342,15 +342,15 @@ var Game = {
 	
 	softReset: function(speedrun) {
 	
-		if(speedrun) confirmmsg = "Are you sure to soft reset and turn on speedrun mode?";
-		else confirmmsg = "Are you sure to soft reset? This action can't be undone!";
+		if(speedrun) confirmmsg = "您确定要软重置并打开速通模式吗？";
+		else confirmmsg = "你确定软复位？ 此操作无法撤消！";
 		
 		if(confirm(confirmmsg)) {
-			if(prompt("Type \"SOFT RESET\" to reset your game") == "SOFT RESET") {
+			if(prompt("输入 \"SOFT RESET\" 去重置 你的游戏") == "SOFT RESET") {
 				localStorage.cookiesTemp = Player.numItems("cookie");
 				if(speedrun) localStorage.speedrunMode = true;
 				localStorage.removeItem("materialwarriorsave");
-				alert('Game has been soft reset!');
+				alert('游戏已经软重置!');
 				window.location.reload();
 			}
 		}
@@ -920,7 +920,7 @@ var Game = {
 			Game.softReset(true);
 		}
 		else {
-			if(confirm("Are you sure to turn off speedrun mode?")) Game.speedrun = false;
+			if(confirm("您确定关闭速通模式吗？")) Game.speedrun = false;
 		}
 		UI.update();
 		UI.speedrun();
