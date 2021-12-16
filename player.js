@@ -862,22 +862,22 @@ scroll='   _____________________________________________\n\
 					if(Player.numItems("dragon-corpse") >= 20) {
 						Player.removeItem("dragon-corpse", 20);
 						Player.save.inventory.body.push("dragon-armor");
-						alert('You successfully crafted a dragon armor!');
+						alert('你成功制作了龙甲！');
 						UI.hideAlert();
-						UI.addLog("You crafted a dragon armor, don't forget to use it!");
+						UI.addLog("你制作了龙盔甲，别忘了使用它！");
 					}
-					else { alert('You don\'t have enough dragon corpse to craft the armor yet!'); }
+					else { alert('你还没有足够的龙尸来制作盔甲！'); }
 				}
-				else { alert('Your knife needs to have at least 50,000 damage to craft the armor!'); }
+				else { alert('你的刀需要至少 50,000 点伤害才能制作盔甲！'); }
 			}
-			else { alert('You already have the armor!'); }
+			else { alert('你已经有了盔甲！'); }
 		}
 		else if(what=="potion") {
 			if(tools.arrayContains(Player.save.inventory.body, "dragon-armor")) {
-				var numpotions = prompt("How many blue heart potions do you want to craft?", "1");
+				var numpotions = prompt("你想要制作多少蓝心药水?", "1");
 				numpotions = parseInt(Math.abs(Math.round(numpotions)));
 				if(isNaN(numpotions) || numpotions<1) numpotions = 1;
-				if(confirm("Are you sure to craft "+tools.num(numpotions)+" blue heart potion(s)?")) {
+				if(confirm("你确定要制作 "+tools.num(numpotions)+" 蓝心药水?")) {
 					if(Player.numItems("heart") >= numpotions) {
 						if(Player.numItems("s_heart") >= numpotions) {
 							Player.removeItem("heart", numpotions);
@@ -886,12 +886,12 @@ scroll='   _____________________________________________\n\
 							Player.save.maxhp += 500000 * numpotions;
 							UI.addLog("You drank <b>"+tools.num(numpotions)+"</b> blue heart potion(s) and now you have <b>"+tools.num(Player.save.maxhp)+"</b> max HP!");
 						}
-						else { alert('You don\'t have enough sparkling heart!'); }
+						else { alert('你没有足够的闪闪发光的心！'); }
 					}
-					else { alert('You don\'t have enough blue heart!'); }
+					else { alert('你没有足够的蓝心!'); }
 				}
 			}
-			else { alert('You don\'t have a dragon armor!'); }
+			else { alert('你没有龙甲!'); }
 		}
 		UI.update();
 	},

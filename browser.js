@@ -288,7 +288,7 @@ var browser = {
 	},
 	
 	addBookmark: function() {
-		var link = prompt("Enter URL to bookmark:","");
+		var link = prompt("输入要添加书签的 URL:","");
 		if(link!==null && link!="") {
 			Game.save.bookmarks.push(link);
 			browser.open("about:bookmarks");
@@ -297,9 +297,9 @@ var browser = {
 	
 	bookmarkPage: function() {
 		var page = document.getElementById("url-box").value;
-		if(confirm("Are you sure to bookmark "+page+"?")) {
+		if(confirm("你确定要收藏吗 "+page+"?")) {
 			Game.save.bookmarks.push(page);
-			alert("The page has been added to bookmarks.");
+			alert("该页面已添加到书签中。");
 		}
 	},
 	
@@ -316,29 +316,29 @@ var browser = {
 		else image="1f528",name="Hammer",pack=0,price=seeded.integer({min: 50000000000000, max: 150000000000000});
 		
 		if(tools.arrayContains(Player.save.inventory.weapon,"hammer") && name=="Hammer") {
-			alert('You already have a hammer!');
+			alert('你已经有锤子了!');
 			return false;
 		}
 		
 		if(Player.save.gold>=price) {
-			if(confirm('Are you sure to buy this item for '+tools.num(price)+' gold? This might be a scam!')) {
+			if(confirm('您确定要购买此商品用 '+tools.num(price)+' 金子? 这可能是一个骗局!')) {
 				Player.save.gold-=price;
 				if(seeded.integer({min: 1, max: 5})==1) {
-					alert('It\'s a scam! :(');
+					alert('这是一个骗局! :(');
 				}
 				else {
 					if(image=="1f499") {
 						Player.addItem("heart",pack);
 						Player.save.hp += 400*pack;
 						Player.save.maxhp += 400*pack;
-						alert('Item successfully purchased!');
+						alert('商品已成功购买!');
 						UI.addLog("You bought <b>"+tools.num(pack)+"</b> blue hearts for <b>"+tools.num(price)+"</b> gold.");
 						Player.save.spawn2 = true;
 					}
 					else if(image=="1f496") {
 						Player.addItem("s_heart",pack);
 						Player.save.regenHp+=pack;
-						alert('Item successfully purchased!');
+						alert('商品已成功购买!');
 						UI.addLog("You bought <b>"+tools.num(pack)+"</b> shiny hearts for <b>"+tools.num(price)+"</b> gold.");
 						
 						var heartstoapply = pack;
@@ -352,13 +352,13 @@ var browser = {
 					}
 					else if(image=="1f528") {
 						Player.save.inventory.weapon.push("hammer");
-						alert('Item successfully purchased!');
+						alert('商品已成功购买!');
 						UI.addLog("You bought a hammer for <b>"+tools.num(price)+"</b> gold.");
 					}
 				}
 			}
 		}
-		else alert('Not enough gold!');
+		else alert('没有足够的金子!');
 		
 		UI.update();
 		
