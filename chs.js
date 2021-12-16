@@ -219,7 +219,7 @@ var cnItems = {
     "You could pay your loan if you have enough gold.": "如果你有足够的黄金，你就可以偿还贷款。",
     "You could take a loan from the bank if you wanted to.": "如果你愿意，你可以从银行贷款。",
     "2021 message!": "2021 消息!",
-    "": "",
+    "Ouch! Cactus hurts!": "哎哟! 仙人掌，真疼！",
     "": "",
     "": "",
     "": "",
