@@ -574,7 +574,7 @@ var Battle = {
 			var enemy = Game.getEntity(x,y);
 			
 			if(enemy.name=="ghost") {
-				alert("Can't eat apple when in a battle against a ghost.");
+				alert("与幽灵战斗时不能吃苹果。");
 			}
 			else {
 				if(Player.save.inventory.item.apple>0 && Player.save.hp<Player.save.maxhp && !Battle.playerisattacking) {
@@ -743,7 +743,7 @@ var Battle = {
 			var y = Battle.ongoing.split(",")[1];
 			var enemy = Game.getEntity(x,y);
 			if(enemy.name=="ghost") {
-				alert("You can't run from ghosts!");
+				alert("你不能逃避鬼魂！");
 			}
 			else {
 				Battle.run();
@@ -758,7 +758,7 @@ var Battle = {
 			var y = Battle.ongoing.split(",")[1];
 			var enemy = Game.getEntity(x,y);
 			if(enemy.name=="ghost") {
-				alert("You can't hide from ghosts!");
+				alert("你无法躲避鬼魂！");
 			}
 			else {
 				Battle.playerDodging = true;
@@ -781,7 +781,7 @@ var Battle = {
 			var enemy = Game.getEntity(x,y);
 			var enemyInfo = Battle.getEnemyInfo(enemy.name);
 			if(enemy.name=="ghost") {
-				alert("Throwing gold won't work against ghosts!");
+				alert("投掷金币对鬼魂无效！");
 			}
 			else {
 				var price = tools.throwGoldPrice();
