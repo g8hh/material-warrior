@@ -373,7 +373,7 @@ var Player = {
 				Player.save.inventory.weapon.push("scissors");
 				UI.addLog("You bought scissors for <b>5</b> gold.");
 			}
-			else { alert('Not enough gold!'); }
+			else { alert('金币不够！'); }
 		}
 		else if(item=="knife") {
 			if(Player.save.gold>=17) {
@@ -381,7 +381,7 @@ var Player = {
 				Player.save.inventory.weapon.push("knife");
 				UI.addLog("You bought a knife for <b>17</b> gold.");
 			}
-			else { alert('Not enough gold!'); }
+			else { alert('金币不够！'); }
 		}
 		else if(item=="apple") {
 			if(Player.save.gold>=50) {
@@ -389,7 +389,7 @@ var Player = {
 				Player.save.inventory.item.apple++;
 				UI.addLog("You bought an apple for <b>50</b> gold.");
 			}
-			else { alert('Not enough gold!'); }
+			else { alert('金币不够！'); }
 		}
 		else if(item=="apple-10") {
 			if(Player.save.gold>=475) {
@@ -397,7 +397,7 @@ var Player = {
 				Player.save.inventory.item.apple+=10;
 				UI.addLog("You bought 10 apples for <b>475</b> gold.");
 			}
-			else { alert('Not enough gold!'); }
+			else { alert('金币不够！'); }
 		}
 		else if(item=="headphones") {
 			if(Player.save.gold>=50) {
@@ -405,7 +405,7 @@ var Player = {
 				Player.save.inventory.head.push("headphones");
 				UI.addLog("You bought a pair of headphones for <b>50</b> gold.");
 			}
-			else { alert('Not enough gold!'); }
+			else { alert('金币不够！'); }
 		}
 		else if(item=="magic-hat") {
 			if(Player.save.gold>=750) {
@@ -413,7 +413,7 @@ var Player = {
 				Player.save.inventory.head.push("magic-hat");
 				UI.addLog("You bought a magic hat for <b>750</b> gold.");
 			}
-			else { alert('Not enough gold!'); }
+			else { alert('金币不够！'); }
 		}
 		else if(item=="heart-armor") {
 			if(Player.save.gold>=100000) {
@@ -421,7 +421,7 @@ var Player = {
 				Player.save.inventory.body.push("heart-armor");
 				UI.addLog("You bought a heart armor for <b>100,000</b> gold.");
 			}
-			else { alert('Not enough gold!'); }
+			else { alert('金币不够！'); }
 		}
 		else if(item=="teleporter" && !Player.save.inventory.thing.teleporter) {
 			if(Player.save.gold>=50000) {
@@ -431,7 +431,7 @@ var Player = {
 				Game.addTile(50,115,true,"TP");
 				Game.addTile(50,263,true,"TP");
 			}
-			else { alert('Not enough gold!'); }
+			else { alert('金币不够！'); }
 		}
 		else if(item=="blue-heart") {
 			if(Player.save.gold>=100000) {
@@ -442,7 +442,7 @@ var Player = {
 				UI.addLog("Your bought a blue heart for <b>100,000</b> gold.");
 				Player.save.spawn2 = true;
 			}
-			else { alert('Not enough gold!'); }
+			else { alert('金币不够！'); }
 		}
 		else if(item=="smartphone") {
 			if(Player.save.gold>=10000000) {
@@ -450,7 +450,7 @@ var Player = {
 				Player.save.hasSmartphone = true;
 				UI.addLog("You bought a smartphone for <b>10,000,000</b> gold.");
 			}
-			else { alert('Not enough gold!'); }
+			else { alert('金币不够！'); }
 		}
 		UI.update();
 	},
@@ -563,7 +563,7 @@ var Player = {
 				UI.addLog("Your scissors now deal <b>"+tools.num(totalDmg)+"</b> damage.");
 				UI.update();
 			}
-			else { alert('Not enough gold!'); }
+			else { alert('金币不够！'); }
 		}
 		else if(what=="knife") {
 			var damage = Battle.getWeaponInfo("knife").damage;
@@ -577,7 +577,7 @@ var Player = {
 				UI.addLog("Your knife now deals <b>"+tools.num(totalDmg)+"</b> damage.");
 				UI.update();
 			}
-			else { alert('Not enough gold!'); }
+			else { alert('金币不够！'); }
 		}
 	},
 	
@@ -820,7 +820,7 @@ scroll='   _____________________________________________\n\
 					UI.addLog("You paid your loan.");
 					UI.hideAlert();
 				}
-				else { alert('Not enough gold!'); }
+				else { alert('金币不够！'); }
 			}
 		}
 		UI.update();
