@@ -708,10 +708,10 @@ var Player = {
 scroll='   _________________________\n\
  =(__    ___     __  ___   _)=\n\
    |                       |\n\
-   |   Roses are red       |\n\
-   |   Violets are blue    |\n\
-   |   All my base         |\n\
-   |   Are belong to you   |\n\
+   |   玫瑰是红色的          |\n\
+   |   紫罗兰是蓝色的        |\n\
+   |   我所有的基地          |\n\
+   |   属于你               |\n\
    |__    ___   __    ___  |\n\
  =(_________________________)=\n\
 ';
@@ -720,15 +720,15 @@ scroll='   _________________________\n\
 scroll='  _____________________________________________\n\
  =(__    ___      __    _____   ___      ____   _)=\n\
    |                                            |\n\
-   |   Ho, mia kor\', ne batu maltrankvile,      |\n\
-   |   El mia brusto nun ne saltu for!          |\n\
-   |   Jam teni min ne povas mi facile,         |\n\
-   |   Ho, mia kor\'!                            |\n\
+   |   哦，我的心，不要着急跳动,                    |\n\
+   |   现在不要跳出我的胸膛!                       |\n\
+   |   我不能再坚持了,                            |\n\
+   |   喔，米娅科尔\'!                            |\n\
    |                                            |\n\
-   |   Ho, mia kor\'! Post longa laborado        |\n\
-   |   &#264u mi ne venkos en decida hor\'?          |\n\
-   |   Sufi&#265e! trankvili&#285u de l\' batado,        |\n\
-   |   Ho, mia kor\'!                            |\n\
+   |   啊我的心啊！ 经过长时间的工作                |\n\
+   |   &#264u 我不会在决定性的时刻获胜\'?          |\n\
+   |   苏菲派 &#265e！ 从殴打中冷静下来,            |\n\
+   |   喔，米娅科尔\'!                            |\n\
    |__    ___   __    ___  _________        _   |\n\
  =(______________________________________________)=\n\
 ';			
@@ -737,12 +737,12 @@ scroll='  _____________________________________________\n\
 scroll='   _____________________________________________\n\
  =(__    ___      __    _____   ___      ____   _)=\n\
    |                                            |\n\
-   |   Legends say that in a mysterious place   |\n\
-   |   called "the negative zone" there\'s a     |\n\
-   |   creature which has infinite health and   |\n\
-   |   high damage. One who can defeat it       |\n\
-   |   will have their own adventure of a       |\n\
-   |   lifetime and gain a lot of fame.         |\n\
+   |   传说在一个神秘的地方                        |\n\
+   |   被称为“负面区域”，有一个                    |\n\
+   |   生物拥有无限生命值和                        |\n\
+   |   高伤害。 谁能打败它                         |\n\
+   |   会有属于自己的冒险                          |\n\
+   |   一生名声大噪.                              |\n\
    |__    ___   __    ___  _________        _   |\n\
  =(______________________________________________)=\n\
 ';			
@@ -752,46 +752,46 @@ scroll='   _____________________________________________\n\
 scroll='   _____________________________________________\n\
  =(__    ___      __    _____   ___      ____   _)=\n\
    |                                            |\n\
-   |   Here\'s the thing. You said a "jackdaw    |\n\
-   |   is a crow."                              |\n\
+   |   事情是这样的。 你说“寒鸦                    |\n\
+   |   是乌鸦."                                 |\n\
    |                                            |\n\
-   |   Is it in the same family? Yes. No        |\n\
-   |   one\'s arguing that.                      |\n\
+   |   是在同一个家庭吗？ 是的。 没                 |\n\
+   |   有人在争论这一点。                          |\n\
    |                                            |\n\
-   |   As someone who is a scientist who        |\n\
-   |   studies crows, I am telling you,         |\n\
-   |   specifically, in science, no one calls   |\n\
-   |   jackdaws crows. If you want to be        |\n\
-   |   "specific" like you said, then you       |\n\
-   |   shouldn\'t either. They\'re not the same   |\n\
-   |   thing.                                   |\n\
+   |   作为一个科学家                             |\n\
+   |   研究乌鸦，我告诉你,                         |\n\
+   |   具体来说，在科学中，没有人称                  |\n\
+   |   寒鸦为乌鸦。 如果你想成为                    |\n\
+   |   “具体”就像你说的那样，那么你                  |\n\
+   |   也不应该。 他们是不一样的                    |\n\
+   |   东西.                                     |\n\
    |                                            |\n\
-   |   If you\'re saying "crow family" you\'re    |\n\
-   |   referring to the taxonomic grouping of   |\n\
-   |   Corvidae, which includes things from     |\n\
-   |   nutcrackers to blue jays to ravens.      |\n\
+   |   如果你说的是“乌鸦家族”                      |\n\
+   |   参考分类学分组                             |\n\
+   |   鸦科，其中包括来自                          |\n\
+   |   从胡桃夹子到蓝鸟再到乌鸦.                    |\n\
    |                                            |\n\
-   |   So your reasoning for calling a          |\n\
-   |   jackdaw a crow is because random         |\n\
-   |   people "call the black ones crows?"      |\n\
-   |   Let\'s get grackles and blackbirds in     |\n\
-   |   there, then, too.                        |\n\
+   |   所以你打电话的原因                          |\n\
+   |   寒鸦是一只乌鸦是因为随机                     |\n\
+   |   人们“称黑人为乌鸦？”                        |\n\
+   |   让我们把 黑羽椋鸟 和 黑鸟 放进去              |\n\
+   |   那么，那里也是。                            |\n\
    |                                            |\n\
-   |   Also, calling someone a human or an      |\n\
-   |   ape? It\'s not one or the other, that\'s   |\n\
-   |   not how taxonomy works. They\'re both.    |\n\
-   |   A jackdaw is a jackdaw and a member of   |\n\
-   |   the crow family. But that\'s not what     |\n\
-   |   you said. You said a jackdaw is a        |\n\
-   |   crow, which is not true unless you\'re    |\n\
-   |   okay with calling all members of the     |\n\
-   |   crow family crows, which means you\'d     |\n\
-   |   call blue jays, ravens, and other        |\n\
-   |   birds crows, too. Which you said you     |\n\
-   |   don\'t.                                   |\n\
+   |   此外，称某人为人或                          |\n\
+   |   猿？ 这不是一个或另一个，那是                 |\n\
+   |   不是分类学的工作原理。 他们都是               |\n\
+   |   寒鸦是寒鸦，是寒鸦的成员                     |\n\
+   |   乌鸦家族。 但这不是什么                      |\n\
+   |   你说。 你说寒鸦是                           |\n\
+   |   乌鸦，这不是真的，除非你是                    |\n\
+   |   可以打电话给所有成员                         |\n\
+   |   乌鸦家族乌鸦，这意味着你会                    |\n\
+   |   给蓝鸟、乌鸦和其他人打电话                   |\n\
+   |   鸟也叫。 你说你哪个                         |\n\
+   |   别。                                      |\n\
    |                                            |\n\
-   |   It\'s okay to just admit you\'re           |\n\
-   |   wrong, you know?                         |\n\
+   |   承认你是可以的                             |\n\
+   |   错了，你知道吗？                           |\n\
    |__    ___   __    ___  _________        _   |\n\
  =(______________________________________________)=\n\
 ';			
