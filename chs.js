@@ -487,7 +487,7 @@ var cnPrefix = {
     "Pizza x": "披萨 x",
     "Shiny Heart x": "闪亮的心 x",
     "Blue Heart x": "蓝心 x",
-    "": "",
+    "THROW GOLD (": "扔金币 (",
     "": "",
     "": "",
     "": "",
