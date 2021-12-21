@@ -596,7 +596,7 @@ var Player = {
 			document.getElementById("package-take").addEventListener("click", function(){Player.takeItem("heart",x,y)});
 		}
 		else if(y==188) {
-			html = "This package contains a mysterious message:<br><br><div style='font-family:monospace;padding-left:30px;'>(25, 42) a gift awaits.<br><div style='text-align:right;padding-right:30px;'>Sincerely, (48, 260)</div></div>";
+			html = "这个箱子包含一个神秘的消息：<br><br><div style='font-family:monospace;padding-left:30px;'>(25, 42) 有一个礼物在等着你.<br><div style='text-align:right;padding-right:30px;'>真诚的, (48, 260)</div></div>";
 			document.getElementById("package-take").style.display = "none";
 		}
 		else if(x==52 && y==260) {
@@ -615,7 +615,7 @@ var Player = {
 				document.getElementById("package-take").addEventListener("click", function(){Player.takeItem("pizzas",x,y)});
 			}
 			else {
-				html = "This package contains a message:"+message+"Open settings to show player coordinates.";
+				html = "这个箱子包含一条消息："+message+"打开设置以显示玩家坐标。";
 				document.getElementById("package-take").style.display = "none";
 			}
 		}
