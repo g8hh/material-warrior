@@ -568,6 +568,8 @@ var cnRegReplace = new Map([
     [/^\"Shiny Heart Pack\" is sold on (.+) only for (.+) gold!$/, '\"闪亮的心组合包\" 在 $1 上仅售 $2 金币！'],
     [/^\"Shiny Heart Pack \(contains (.+) hearts\)\" is sold on (.+) only for (.+) gold!$/, '\"闪亮的心组合包（包含 $1 颗心）\" 在 $1 上仅售 $2 金币！'],
     [/^\"Hammer\" is sold on (.+) only for (.+) gold!$/, '\"锤子\" 在 $1 上仅售 $2 金币！'],
+    [/^Blue Heart Pack \(contains (.+) hearts$/, '蓝心组合包（包含 $1 颗心'],
+    [/^Shiny Heart Pack \(contains (.+) hearts$/, '闪亮的心组合包（包含 $1 颗心'],
     [/^Game autosaves in (.+) seconds.$/, '游戏将在 $1 秒内自动保存。'],
     [/^Next at (.+) points$/, '下一个在 $1 点数'],
     [/^Pack contains (.+) hearts.$/, '组合包 包含 $1 颗心。'],
